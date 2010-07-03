@@ -1,0 +1,14 @@
+
+<article>
+	<header>		
+		<h3><%= link_to post.topic, post %></h3>
+	
+		<section class="details">
+			<time datetime="<%= post.published_at.xmlschema %>" pubdate>published: <%= post.published_at.to_s(:long) %></time>
+			<p class="keywords">keywords: <%= post.keywords.to_s %></p>
+		</section>
+	</header>
+
+	<%= raw post.body %>
+
+</article>

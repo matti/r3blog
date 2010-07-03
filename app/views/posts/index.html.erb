@@ -1,0 +1,9 @@
+<section class="articles">
+
+		<ul>
+		<% @posts.each do |post| %>
+			<li><%= link_to post.topic, post_path(post) %> <time datetime="<%= post.published_at.xmlschema %>" pubdate><%= post.published_at.to_date.to_s(:long_ordinal) %></time></li>
+		<% end %>
+		</ul>
+
+</section>

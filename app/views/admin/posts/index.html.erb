@@ -1,0 +1,10 @@
+
+<%= link_to "new post", new_admin_post_path %>
+
+<ul>
+<% @posts.each do |post| %>
+	
+	<li><%= "(draft)" unless post.published? %> <%= link_to post.topic, edit_admin_post_path(post) %></li>
+	
+<% end %>
+</ul>

@@ -1,0 +1,88 @@
+article,aside,figure,footer,header,hgroup,nav,section {
+	display:block
+}
+
+body {
+	background-color: #000;
+	background: #000 url('/images/corner.jpg') no-repeat left top;
+}
+
+body {
+	padding:0;
+	margin:0;
+
+	line-height:1.75;
+	word-spacing:0.1em;
+	
+	font-family: "Helvetica Neue", Helvetica, Arial, Helvetica, sans-serif;
+
+	color: #e2e2e2;
+}
+
+a img {
+	border: 0;
+}
+
+a, a:focus, a:hover, a:visited {
+	color:#b2713b;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+
+header hgroup {
+	margin-top: 5em;
+}
+
+header h2 {
+	margin-top:-2.5em;
+	margin-left:7.2em;
+	font-size: medium;
+}
+			
+header hgroup, section.articles, section.comments, section.post {
+	margin-left: 10em;
+}
+
+article, section.comments {
+	max-width: 40em;
+}
+
+section.articles time {
+	font-size: small;
+}
+
+
+article:nth-child(n) {
+	margin-top: 2em;
+}
+article:nth-child(n+2) {
+	margin-top: 3em;
+}
+
+
+article section.details {
+	margin-top: -2.5em;
+	font-size: x-small;
+}
+
+article section.details p.keywords {
+	margin-top: -0.5em;
+}
+			
+
+
+
+section.comments {
+	margin-top: 3em;
+}
+
+article section.comments div.dsq-dc-logo,
+article section.comments div.dsq-options  { 
+	display: none !important; 
+}
+
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>blog.mpa.fi</title>
+		
+		<meta charset="utf-8" />
+		
+		<link href="http://feeds.feedburner.com/blogmpafi-posts" rel="alternate" title="blog.mpa.fi" type="application/atom+xml" />
+	  
+		
+		<script type="text/javascript" src="/shjs/sh.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/shjs/sh_golden.min.css">
+
+		<link rel="stylesheet" type="text/css" href="/stylesheets/application.css">
+		
+		
+		<script type="text/javascript">
+		
+		if ( location.href.indexOf("localhost") == 7 ) {
+			var disqus_developer = 1;
+			var disqus_url = "http://blog.mpa.fi";
+		}
+		
+		</script>
+
+		<!--[if IE]>
+		<script>
+		  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+		    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+		    "progress,section,time,video").split(',');
+		  for (var i = 0; i < e.length; i++) {
+		    document.createElement(e[i]);
+		  }
+		</script>
+		<![endif]-->
+	</head>
+
+	<body onload="sh_highlightDocument();">
+		
+		<header>
+			<hgroup>
+				<h1><%= link_to "blog.mpa.fi", root_path %></h1>
+				
+				<h2>tech notes <a href="http://feeds.feedburner.com/blogmpafi-posts"><img src="/images/feed.png" alt="feed"/></a></h2>
+
+			</hgroup>
+		</header>
+
+		<%= yield %>
+		
+
+		<footer>
+		</footer>
+
+
+		<% if controller.controller_name == "posts" && controller.action_name == "show" %>
+		<script type="text/javascript">
+		//<![CDATA[
+		(function() {
+			var links = document.getElementsByTagName('a');
+			var query = '?';
+			for(var i = 0; i < links.length; i++) {
+			if(links[i].href.indexOf('#disqus_thread') >= 0) {
+				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+			}
+			}
+			document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/blogmpafi/get_num_replies.js' + query + '"></' + 'script>');
+		})();
+		//]]>
+		</script>
+		<% end %>
+		
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+		var pageTracker = _gat._getTracker("UA-15120660-1");
+		pageTracker._trackPageview();
+		} catch(err) {}</script>
+	</body>
+
+</html>
